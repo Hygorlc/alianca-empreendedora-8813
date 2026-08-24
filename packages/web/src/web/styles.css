@@ -1,0 +1,109 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-ink: #0b0b0a;
+  --color-ink-soft: #111110;
+  --color-ink-card: #161513;
+  --color-gold: #b9964f;
+  --color-gold-light: #d0b06a;
+  --color-offwhite: #f1eee7;
+  --color-graphite: #222222;
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Montserrat", system-ui, sans-serif;
+
+  --radius-none: 0px;
+}
+
+:root {
+  --background: #0b0b0a;
+  --foreground: #f1eee7;
+  --radius: 2px;
+}
+
+@layer base {
+  * {
+    border-color: rgba(185, 150, 79, 0.18);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-offwhite);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    line-height: 1.75;
+  }
+
+  ::selection {
+    background: rgba(185, 150, 79, 0.3);
+  }
+}
+
+@utility label-xs {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+@utility display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+}
+
+@utility grain {
+  position: relative;
+}
+
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Reveal on scroll — one orchestrated entrance per section */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+.hairline {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(185, 150, 79, 0.55) 25%,
+    rgba(185, 150, 79, 0.55) 75%,
+    transparent
+  );
+  height: 1px;
+}
+
+@keyframes floatSoft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
