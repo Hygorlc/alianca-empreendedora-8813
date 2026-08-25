@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
-import { EVENT, whatsappLink } from "../../lib/event";
+import { whatsappLink } from "../../lib/event";
 import { Eyebrow, Section, SectionTitle } from "../section";
 import { Reveal } from "../reveal";
 
@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     q: "O ingresso é mesmo válido pra duas pessoas?",
-    a: `O ingresso de ${EVENT.price} é individual. Se você quiser levar um sócio, sua esposa, seu marido, seu gerente de marketing ou outra pessoa envolvida nas decisões do seu negócio, solicite uma vaga adicional para ela.`,
+    a: "Sim. Por R$ 197 você pode trazer um sócio, sua esposa, seu marido, seu gerente de marketing ou quem você quiser que esteja envolvido nas decisões do seu negócio. Posicionamento muda quando a pessoa que decide junto com você está na mesma página.",
   },
   {
     q: "Essa palestra serve para qualquer tipo de negócio?",
