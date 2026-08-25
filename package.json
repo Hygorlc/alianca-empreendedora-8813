@@ -3,7 +3,7 @@
   "private": true,
   "packageManager": "npm@10.9.2",
   "workspaces": [
-    "packages/*"
+    "packages/web"
   ],
   "scripts": {
     "dev": "npm --workspace @template/web run dev",
