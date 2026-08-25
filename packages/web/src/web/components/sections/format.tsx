@@ -26,19 +26,20 @@ export function Format() {
         O que terá no evento:
       </h2>
 
-      <div className="mt-16 grid gap-5 md:grid-cols-3">
+      <div className="mt-16 grid gap-px bg-gold/10 md:grid-cols-3">
         {blocks.map((block, i) => (
-          <Reveal key={block.title} delay={i * 110}>
-            <article className="flex h-full flex-col rounded-2xl border border-gold/70 bg-gradient-to-b from-[#11110f] to-ink p-6 shadow-[0_0_14px_rgba(199,154,73,0.22)] md:p-7">
-              <div className="aspect-[4/3] overflow-hidden rounded-xl">
+          <Reveal key={block.title} delay={i * 110} className="bg-ink">
+            <article className="flex h-full flex-col bg-ink">
+              <div className="relative aspect-[4/3] overflow-hidden">
                 <img
                   src={block.image}
                   alt={block.title}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.03]"
+                  className="h-full w-full object-cover opacity-75 saturate-[0.75] transition-all duration-700 hover:scale-[1.03] hover:opacity-90"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
               </div>
-              <div className="flex flex-1 flex-col pt-8 text-center">
+              <div className="relative -mt-10 flex flex-1 flex-col px-8 pb-10 pt-4 text-center">
                 <h3 className="display text-2xl uppercase leading-tight text-gold-light md:text-3xl">
                   {block.title}
                 </h3>
