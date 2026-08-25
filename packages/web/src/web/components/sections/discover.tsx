@@ -35,7 +35,7 @@ export function Discover() {
       <Eyebrow index="I">O que vai ter na sala em 3 horas</Eyebrow>
       <SectionTitle>
         Três horas para mudar a forma como o mercado{" "}
-        <span className="text-gold-light">percebe e valoriza você</span>.
+        <span className="text-gold-light">percebe e valoriza você.</span>
       </SectionTitle>
 
       <div className="mt-16 border-t border-gold/15">
