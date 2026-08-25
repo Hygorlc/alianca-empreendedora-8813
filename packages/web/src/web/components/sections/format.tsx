@@ -1,10 +1,10 @@
-import { Eyebrow, Section, SectionTitle } from "../section";
+import { Section } from "../section";
 import { Reveal } from "../reveal";
 
 const blocks = [
   {
     n: "01",
-    tag: "Palestra",
+    tag: "",
     image: "https://pablopitani.com.br/wp-content/uploads/2025/08/DMF_7691-1024x683-2.webp",
     title: "Imersão prática em posicionamento",
     body: "Você vai entender o que separa empresários comuns daqueles que são percebidos como referência — e como fazer o cliente comparar autoridade antes de comparar preço.",
@@ -28,24 +28,20 @@ const blocks = [
 export function Format() {
   return (
     <Section id="experiencia" tone="soft">
-      <Eyebrow index="II">A estrutura do encontro</Eyebrow>
-      <SectionTitle>
-        Não é só um evento de networking.
-        <span className="block text-gold-light">É conteúdo, análise e conexão entre empresários.</span>
-      </SectionTitle>
-
-      <div className="mt-16 grid gap-px bg-gold/10 md:grid-cols-3">
+      <div className="grid gap-px bg-gold/10 md:grid-cols-3">
         {blocks.map((block, i) => (
           <Reveal key={block.n} delay={i * 110} className="bg-ink">
             <article className="flex h-full flex-col">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
                   src={block.image}
-                  alt={block.tag}
+                  alt={block.tag || block.title}
                   className="h-full w-full object-cover opacity-55 saturate-[0.55] transition-all duration-700 hover:opacity-80"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
-                <span className="label-xs absolute bottom-5 left-6 text-gold">{block.tag}</span>
+                {block.tag && (
+                  <span className="label-xs absolute bottom-5 left-6 text-gold">{block.tag}</span>
+                )}
               </div>
               <div className="flex flex-1 flex-col p-8">
                 <span className="label-xs text-gold/50">{block.n}</span>
