@@ -17,8 +17,8 @@ function Index() {
         <Hero />
         <CountdownBand />
         <Discover />
-        <Format />
         <Gallery />
+        <Format />
         <Testimonials />
         <Speaker />
         <Ticket />
