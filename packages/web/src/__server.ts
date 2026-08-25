@@ -8,5 +8,6 @@ app.use("/*", serveStatic({ root: "./packages/web/dist" }));
 app.get("*", serveStatic({ path: "./packages/web/dist/index.html" }));
 
 serve({ fetch: app.fetch, port }, ({ port: activePort }) => {
-  console.log(`Web server listening on http://localhost:${activePort}`);
+  console.log(`Web server listening on port ${activePort ?? port}`);
+  console.log(`Resend configured: ${Boolean(process.env.RESEND_API_KEY)}`);
 });
