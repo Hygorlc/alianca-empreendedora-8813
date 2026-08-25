@@ -6,28 +6,28 @@ import { Reveal } from "../reveal";
 
 const faqs = [
   {
-    q: "Esse encontro serve para qualquer tipo de negócio?",
-    a: "Serve para empresários e profissionais que vendem serviço, produto ou expertise e querem ser escolhidos por autoridade, não por preço. O conteúdo é sobre percepção de valor — aplica-se a advocacia, saúde, estética, indústria, tecnologia, varejo e serviços em geral.",
+    q: "Essa palestra serve pra qualquer tipo de negócio?",
+    a: "Serve pra qualquer empresário ou profissional liberal que vende seu trabalho e quer parar de competir por preço. Já passaram pela sala advogados, médicos, esteticistas, arquitetos, consultores, donos de clínica, gestores de e-commerce e empresários do varejo. O método de posicionamento é universal, o que muda é a aplicação no seu nicho específico, que será trabalhada na análise ao vivo.",
   },
   {
-    q: "Quantas pessoas participam?",
-    a: "A sala é limitada. A curadoria existe justamente para manter o ambiente entre pares: empresários construindo posicionamento sério, com espaço real de conversa.",
+    q: "O ingresso é mesmo válido pra duas pessoas?",
+    a: `O ingresso de ${EVENT.price} é individual. Se você quiser levar um sócio, sua esposa, seu marido, seu gerente de marketing ou outra pessoa envolvida nas decisões do seu negócio, solicite uma vaga adicional para ela.`,
   },
   {
-    q: "Posso levar um sócio ou convidado?",
-    a: `Sim. No formulário de inscrição você escolhe a quantidade de vagas — cada vaga é ${EVENT.price}. Recomendamos inscrever o sócio pelo nome dele para emissão da credencial.`,
+    q: "Essa palestra serve para qualquer tipo de negócio?",
+    a: "Sim. As estratégias ensinadas podem ser adaptadas para negócios locais, serviços, infoprodutos, e-commerce e empresas tradicionais.",
   },
   {
-    q: "Vai ter espaço para tirar dúvidas com o Pablo?",
-    a: "Sim. Além da análise de posicionamento ao vivo, há um bloco aberto de perguntas e o momento de relações no intervalo.",
+    q: "E se eu não puder participar no dia, tem reembolso?",
+    a: "A Aliança é presencial e tem vagas limitadas. Por isso pedimos pra você só garantir a vaga se tem certeza que vai estar lá. Em caso de imprevisto sério, entre em contato pelo WhatsApp e a equipe vai avaliar caso a caso.",
   },
   {
-    q: "E se eu não puder participar no dia?",
-    a: "Avisando com pelo menos 48 horas de antecedência, transferimos sua vaga para a próxima edição ou para outra pessoa indicada por você.",
+    q: "Vai ter espaço pra tirar dúvidas com o Pablo?",
+    a: "Sim. Boa parte da palestra é prática e interativa, incluindo a análise ao vivo de perfis. Quem quer falar com o Pablo tem espaço pra isso ali, no momento exato em que o conteúdo ainda está fresco.",
   },
   {
     q: "Vai ter coffee?",
-    a: "Sim, coffee break servido durante o intervalo — parte do ambiente de conversa entre os participantes.",
+    a: "Sim, coffee e ambiente preparado pra você se conectar com os outros empresários presentes.",
   },
 ];
 
