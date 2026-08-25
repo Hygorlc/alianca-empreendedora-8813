@@ -5,23 +5,23 @@ const blocks = [
   {
     n: "01",
     tag: "Palestra",
-    image: "/images/palestra.jpg",
-    title: "Duas horas de imersão no método",
-    body: "O que separa o empresário comum do empresário tratado como referência. Por que a maioria está vendendo o produto errado e como construir uma percepção de valor que faz o cliente parar de comparar preço e começar a comparar autoridade.",
+    image: "https://pablopitani.com.br/wp-content/uploads/2025/08/DMF_7691-1024x683-2.webp",
+    title: "Imersão prática em posicionamento",
+    body: "Você vai entender o que separa empresários comuns daqueles que são percebidos como referência — e como fazer o cliente comparar autoridade antes de comparar preço.",
   },
   {
     n: "02",
     tag: "Análise de posicionamento",
-    image: "/images/analise.jpg",
-    title: "Leitura ao vivo, sem rodeio",
-    body: "Abrimos alguns perfis na sala e mostramos o que está fazendo o seu cliente certo passar reto. Você sai com clareza cirúrgica do que precisa mudar na sua comunicação para atrair quem paga pelo que você entrega.",
+    image: "https://pablopitani.com.br/wp-content/uploads/2025/08/DMF_7706-1024x683-3.webp",
+    title: "Análise ao vivo, sem rodeio",
+    body: "Alguns perfis serão analisados na sala para mostrar, na prática, o que afasta o cliente certo e o que precisa mudar para aumentar sua percepção de valor.",
   },
   {
     n: "03",
-    tag: "Relações entre pares",
-    image: "/images/networking.jpg",
-    title: "Uma sala filtrada pelo próprio conteúdo",
-    body: "Empresários do Rio Grande do Sul construindo posicionamento sério — não amadores em busca de dica fácil. É o tipo de ambiente onde nasce parceria, indicação e contrato real.",
+    tag: "Conexões entre empresários",
+    image: "https://pablopitani.com.br/wp-content/uploads/2025/08/DMF_8103-2-1024x683.webp",
+    title: "Relações que continuam depois do encontro",
+    body: "Uma sala com empresários do Rio Grande do Sul construindo negócios sérios, onde conversas relevantes podem gerar parceria, indicação e contrato real.",
   },
 ];
 
@@ -30,8 +30,8 @@ export function Format() {
     <Section id="experiencia" tone="soft">
       <Eyebrow index="II">A estrutura do encontro</Eyebrow>
       <SectionTitle>
-        Menos evento de networking.
-        <span className="block text-gold-light">Mais conselho de empresários.</span>
+        Não é só um evento de networking.
+        <span className="block text-gold-light">É conteúdo, análise e conexão entre empresários.</span>
       </SectionTitle>
 
       <div className="mt-16 grid gap-px bg-gold/10 md:grid-cols-3">
@@ -56,13 +56,6 @@ export function Format() {
           </Reveal>
         ))}
       </div>
-
-      <Reveal delay={220}>
-        <blockquote className="display mx-auto mt-20 max-w-3xl border-t border-gold/20 pt-12 text-center text-2xl text-offwhite/85 md:text-3xl">
-          “Não é uma sala que precisa ser preenchida. É uma sala que precisa ser construída com as
-          pessoas certas.”
-        </blockquote>
-      </Reveal>
     </Section>
   );
 }

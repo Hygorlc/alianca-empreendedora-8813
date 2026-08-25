@@ -1,4 +1,4 @@
-import { Eyebrow, Section, SectionTitle } from "../section";
+import { Section, SectionTitle } from "../section";
 import { Reveal } from "../reveal";
 
 const testimonials = [
@@ -31,8 +31,7 @@ const initials = (name: string) =>
 export function Testimonials() {
   return (
     <Section>
-      <Eyebrow index="IV">O que dizem os pares</Eyebrow>
-      <SectionTitle>Relatos de quem já esteve na sala.</SectionTitle>
+      <SectionTitle>O que estão falando.</SectionTitle>
 
       <div className="mt-16 grid gap-px bg-gold/10 md:grid-cols-2">
         {testimonials.map((item, i) => (

@@ -1,12 +1,6 @@
 import { Eyebrow, Section } from "../section";
 import { Reveal } from "../reveal";
 
-const marks = [
-  { value: "15", label: "anos estudando posicionamento" },
-  { value: "10 mil+", label: "pessoas em palestras e mentorias" },
-  { value: "RCV", label: "método próprio de posicionamento" },
-];
-
 export function Speaker() {
   return (
     <Section id="palestrante" tone="soft">
@@ -47,17 +41,6 @@ export function Speaker() {
               </p>
             </div>
           </Reveal>
-
-          <div className="mt-12 grid gap-px bg-gold/10 sm:grid-cols-3">
-            {marks.map((mark, i) => (
-              <Reveal key={mark.label} delay={200 + i * 90} className="bg-ink-soft">
-                <div className="px-6 py-7">
-                  <span className="display block text-3xl text-gold-light">{mark.value}</span>
-                  <span className="mt-2 block text-xs text-offwhite/45">{mark.label}</span>
-                </div>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </div>
     </Section>

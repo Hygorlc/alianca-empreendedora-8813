@@ -32,9 +32,10 @@ const items = [
 export function Discover() {
   return (
     <Section id="encontro">
-      <Eyebrow index="I">O que você vai levar da sala</Eyebrow>
+      <Eyebrow index="I">O que vai ter na sala em 3 horas</Eyebrow>
       <SectionTitle>
-        Três horas de clareza sobre <span className="text-gold-light">como você é percebido</span>.
+        Três horas para mudar a forma como o mercado{" "}
+        <span className="text-gold-light">percebe e valoriza você</span>.
       </SectionTitle>
 
       <div className="mt-16 border-t border-gold/15">

@@ -54,7 +54,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-ink/85 via-ink/90 to-ink" />
       </div>
 
-      <div className="relative mx-auto flex min-h-[100svh] w-full max-w-[1200px] flex-col justify-center px-6 pt-32 pb-20 md:px-10">
+      <div className="relative mx-auto flex min-h-[100svh] w-full max-w-[1200px] flex-col justify-center px-6 py-20 md:px-10">
         <div className="grid items-center gap-16 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <Reveal className="flex items-center gap-4">
@@ -97,12 +97,6 @@ export function Hero() {
                 >
                   Quero garantir minha vaga
                   <ArrowDownRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
-                </a>
-                <a
-                  href="#encontro"
-                  className="label-xs inline-flex items-center justify-center border border-offwhite/20 px-9 py-5 text-offwhite/70 transition-colors hover:border-gold hover:text-gold"
-                >
-                  Ver o que acontece na sala
                 </a>
               </div>
             </Reveal>

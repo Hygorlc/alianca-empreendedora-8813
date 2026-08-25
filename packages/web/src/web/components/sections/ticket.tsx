@@ -45,21 +45,6 @@ export function Ticket() {
             </div>
           </Reveal>
 
-          <Reveal delay={200}>
-            <p className="mx-auto mt-7 max-w-[620px] text-center text-xs leading-relaxed text-graphite/55">
-              Solicite sua vaga pelo WhatsApp. Nossa equipe confirma a inscrição e envia os dados
-              de pagamento por lá.{" "}
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-b border-graphite/40 text-graphite hover:border-graphite"
-              >
-                Fale com a curadoria
-              </a>
-              .
-            </p>
-          </Reveal>
         </div>
 
         <Reveal delay={160} className="mt-9 flex justify-center">

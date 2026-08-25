@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Eyebrow, Section, SectionTitle } from "../section";
+import { Section } from "../section";
 
 const photos = [
   "https://pablopitani.com.br/wp-content/uploads/2026/05/18-FOTOS-DIA-02-1024x776.jpg",
@@ -42,35 +42,10 @@ export function Gallery() {
   };
 
   return (
-    <Section id="fotos" tone="soft">
-      <div className="flex items-end justify-between gap-8">
-        <div>
-          <Eyebrow index="III">Dentro da Aliança</Eyebrow>
-          <SectionTitle>Uma sala feita de presença, troca e movimento.</SectionTitle>
-        </div>
-        <div className="hidden shrink-0 gap-3 md:flex">
-          <button
-            type="button"
-            aria-label="Foto anterior"
-            onClick={() => move(-1)}
-            className="flex size-12 items-center justify-center border border-gold/35 text-gold transition-colors hover:bg-gold hover:text-ink"
-          >
-            <ChevronLeft className="size-5" />
-          </button>
-          <button
-            type="button"
-            aria-label="Próxima foto"
-            onClick={() => move(1)}
-            className="flex size-12 items-center justify-center border border-gold/35 text-gold transition-colors hover:bg-gold hover:text-ink"
-          >
-            <ChevronRight className="size-5" />
-          </button>
-        </div>
-      </div>
-
+    <Section id="fotos" tone="soft" className="py-16 md:py-20">
       <div
         ref={trackRef}
-        className="scrollbar-none mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-3"
+        className="scrollbar-none flex snap-x snap-mandatory gap-5 overflow-x-auto pb-3"
       >
         {photos.map((photo, index) => (
           <figure
@@ -90,12 +65,12 @@ export function Gallery() {
         ))}
       </div>
 
-      <div className="mt-5 flex gap-3 md:hidden">
+      <div className="mt-5 flex justify-center gap-3">
         <button
           type="button"
           aria-label="Foto anterior"
           onClick={() => move(-1)}
-          className="flex size-11 items-center justify-center border border-gold/35 text-gold"
+          className="flex size-11 items-center justify-center border border-gold/35 text-gold transition-colors hover:bg-gold hover:text-ink"
         >
           <ChevronLeft className="size-5" />
         </button>
@@ -103,7 +78,7 @@ export function Gallery() {
           type="button"
           aria-label="Próxima foto"
           onClick={() => move(1)}
-          className="flex size-11 items-center justify-center border border-gold/35 text-gold"
+          className="flex size-11 items-center justify-center border border-gold/35 text-gold transition-colors hover:bg-gold hover:text-ink"
         >
           <ChevronRight className="size-5" />
         </button>
