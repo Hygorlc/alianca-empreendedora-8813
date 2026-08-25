@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Eyebrow, Section, SectionTitle } from "../section";
 
@@ -14,6 +14,25 @@ const photos = [
 
 export function Gallery() {
   const trackRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      const track = trackRef.current;
+      if (!track || document.visibilityState !== "visible") return;
+
+      const bounds = track.getBoundingClientRect();
+      const isVisible = bounds.top < window.innerHeight && bounds.bottom > 0;
+      if (!isVisible) return;
+
+      const reachedEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 8;
+      track.scrollTo({
+        left: reachedEnd ? 0 : track.scrollLeft + Math.min(track.clientWidth * 0.82, 860),
+        behavior: "smooth",
+      });
+    }, 4000);
+
+    return () => window.clearInterval(timer);
+  }, []);
 
   const move = (direction: -1 | 1) => {
     trackRef.current?.scrollBy({
