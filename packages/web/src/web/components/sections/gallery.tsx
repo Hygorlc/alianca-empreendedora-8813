@@ -86,7 +86,7 @@ export function Gallery() {
 
       <figure className="mt-12 overflow-hidden border border-gold/15 md:mt-16">
         <img
-          src="/images/foto-grupo-alianca.png"
+          src="/images/foto-grupo-alianca-corrigida.png"
           alt="Participantes da Aliança Empreendedora reunidos"
           loading="lazy"
           className="h-auto w-full object-cover"
