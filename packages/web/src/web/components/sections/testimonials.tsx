@@ -31,7 +31,9 @@ const initials = (name: string) =>
 export function Testimonials() {
   return (
     <Section>
-      <SectionTitle>O que estão falando.</SectionTitle>
+      <SectionTitle className="mx-auto mt-0 text-center text-gold-light">
+        O que estão falando.
+      </SectionTitle>
 
       <div className="mt-16 grid gap-px bg-gold/10 md:grid-cols-2">
         {testimonials.map((item, i) => (
