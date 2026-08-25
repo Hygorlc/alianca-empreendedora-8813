@@ -31,7 +31,11 @@ export function SiteNav() {
     >
       <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-6 py-4 md:px-10">
         <a href="#top" className="flex items-center gap-3">
-          <img src="/images/simbolo.png" alt="Aliança Empreendedora" className="h-9 w-auto" />
+          <img
+            src="/images/simbolo-transparent.png"
+            alt="Aliança Empreendedora"
+            className="h-9 w-auto"
+          />
           <span className="hidden flex-col leading-none sm:flex">
             <span className="display text-base tracking-[0.34em] text-offwhite">ALIANÇA</span>
             <span className="label-xs mt-1 text-[0.55rem] text-gold/80">EMPREENDEDORA</span>
