@@ -20,7 +20,6 @@ const included = [
   "Análise de posicionamento ao vivo",
   "Ambiente de relações entre empresários selecionados",
   "Coffee break servido durante o intervalo",
-  "Certificado de participação",
 ];
 
 export function Ticket() {
