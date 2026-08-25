@@ -15,20 +15,32 @@ export function Hero() {
   const [typedText, setTypedText] = useState("");
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setTypedText(typedPhrase);
+      return;
+    }
+
     let index = 0;
-    let interval: number | undefined;
-    const start = window.setTimeout(() => {
-      interval = window.setInterval(() => {
+    let deleting = false;
+    let timer: number;
+
+    const type = () => {
+      if (deleting) {
+        index -= 1;
+        setTypedText(typedPhrase.slice(0, index));
+        if (index === 0) deleting = false;
+        timer = window.setTimeout(type, index === 0 ? 450 : 45);
+      } else {
         index += 1;
         setTypedText(typedPhrase.slice(0, index));
-        if (index === typedPhrase.length && interval) window.clearInterval(interval);
-      }, 75);
-    }, 550);
-
-    return () => {
-      window.clearTimeout(start);
-      if (interval) window.clearInterval(interval);
+        if (index === typedPhrase.length) deleting = true;
+        timer = window.setTimeout(type, index === typedPhrase.length ? 1600 : 75);
+      }
     };
+
+    timer = window.setTimeout(type, 550);
+
+    return () => window.clearTimeout(timer);
   }, []);
 
   return (
