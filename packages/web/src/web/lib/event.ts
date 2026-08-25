@@ -4,11 +4,11 @@ export const EVENT = {
   tagline: "Conexões estratégicas. Negócios que constroem legado.",
   positioning:
     "Estamos selecionando empresários para uma experiência de relacionamento estratégico entre pares.",
-  dateLabel: "10 de setembro",
+  dateLabel: "17 de setembro",
   weekdayLabel: "Quinta-feira",
   timeLabel: "19h30 às 22h",
   /** 10/09/2026, 19h30 — horário de Brasília (UTC-3) */
-  startsAt: "2026-09-10T19:30:00-03:00",
+  startsAt: "2026-09-17T19:30:00-03:00",
   city: "Porto Alegre / RS",
   address: "Av. Diário de Notícias, 200",
   addressComplement: "Porto Alegre / RS",
@@ -18,7 +18,7 @@ export const EVENT = {
   /** Substituir pelo número oficial de atendimento. */
   whatsapp: "5551999999999",
   whatsappMessage:
-    "Olá! Quero saber mais sobre o encontro Aliança Empreendedora de 10 de setembro em Porto Alegre.",
+    "Olá! Quero saber mais sobre o encontro Aliança Empreendedora de 17 de setembro em Porto Alegre.",
   speaker: {
     name: "Pablo Pitani",
     role: "Especialista em posicionamento pessoal e de marca",
