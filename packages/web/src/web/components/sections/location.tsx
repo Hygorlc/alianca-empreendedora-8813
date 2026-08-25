@@ -12,7 +12,7 @@ const details = [
 export function Location() {
   return (
     <Section id="local">
-      <Eyebrow index="VI">Onde acontece</Eyebrow>
+      <Eyebrow index="VII">Onde acontece</Eyebrow>
       <SectionTitle>Zona Sul de Porto Alegre, ambiente reservado.</SectionTitle>
 
       <div className="mt-16 grid gap-px bg-gold/10 lg:grid-cols-12">

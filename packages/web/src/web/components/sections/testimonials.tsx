@@ -26,7 +26,7 @@ const initials = (name: string) =>
 export function Testimonials() {
   return (
     <Section>
-      <Eyebrow index="III">O que dizem os pares</Eyebrow>
+      <Eyebrow index="IV">O que dizem os pares</Eyebrow>
       <SectionTitle>Relatos de quem já esteve na sala.</SectionTitle>
 
       <div className="mt-16 grid gap-px bg-gold/10 md:grid-cols-2">

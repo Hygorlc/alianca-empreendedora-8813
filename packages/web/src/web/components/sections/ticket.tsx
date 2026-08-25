@@ -54,7 +54,7 @@ export function Ticket() {
     <section id="inscricao" className="grain relative bg-offwhite px-6 py-24 text-graphite md:px-10 md:py-32">
       <div className="relative mx-auto grid w-full max-w-[1200px] gap-16 lg:grid-cols-12 lg:gap-24">
         <div className="lg:col-span-5">
-          <Eyebrow index="V" tone="graphite">
+          <Eyebrow index="VI" tone="graphite">
             Acesso ao encontro
           </Eyebrow>
           <Reveal delay={80}>

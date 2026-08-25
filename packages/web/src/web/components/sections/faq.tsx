@@ -36,7 +36,7 @@ export function Faq() {
 
   return (
     <Section id="faq" tone="soft">
-      <Eyebrow index="VII">Dúvidas frequentes</Eyebrow>
+      <Eyebrow index="VIII">Dúvidas frequentes</Eyebrow>
       <SectionTitle>Antes de confirmar sua vaga.</SectionTitle>
 
       <div className="mt-14 border-t border-gold/15">

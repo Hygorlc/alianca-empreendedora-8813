@@ -3,6 +3,7 @@ import { EVENT, whatsappLink } from "../../lib/event";
 const nav = [
   { href: "#encontro", label: "O encontro" },
   { href: "#experiencia", label: "Experiência" },
+  { href: "#fotos", label: "Fotos" },
   { href: "#palestrante", label: "Palestrante" },
   { href: "#inscricao", label: "Inscrição" },
   { href: "#local", label: "Local" },

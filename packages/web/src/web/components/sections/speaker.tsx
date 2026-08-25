@@ -24,7 +24,7 @@ export function Speaker() {
         </Reveal>
 
         <div className="lg:col-span-7">
-          <Eyebrow index="IV">Quem conduz o encontro</Eyebrow>
+          <Eyebrow index="V">Quem conduz o encontro</Eyebrow>
           <Reveal delay={80}>
             <h2 className="display mt-7 text-4xl md:text-5xl">Pablo Pitani</h2>
             <p className="label-xs mt-4 text-gold">
