@@ -28,9 +28,11 @@ export function Ticket() {
 
           <Reveal delay={140}>
             <div className="mx-auto mt-10 max-w-[620px] border border-graphite/15 p-8 text-left">
-              <span className="label-xs text-graphite/50">Ingresso individual</span>
-              <p className="display mt-3 text-5xl text-graphite">{EVENT.price}</p>
-              <p className="mt-2 text-xs text-graphite/55">{EVENT.priceNote}</p>
+              <div className="text-center">
+                <span className="label-xs text-graphite/50">Ingresso individual</span>
+                <p className="display mt-3 text-5xl text-graphite">{EVENT.price}</p>
+                <p className="mt-2 text-xs text-graphite/55">{EVENT.priceNote}</p>
+              </div>
               <div className="mt-7 h-px bg-graphite/12" />
               <ul className="mt-7 space-y-3">
                 {included.map((item) => (
