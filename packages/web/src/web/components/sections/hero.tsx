@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { ArrowDownRight, CalendarDays, Clock, MapPin } from "lucide-react";
 import { EVENT } from "../../lib/event";
 import { Reveal } from "../reveal";
@@ -8,7 +9,28 @@ const facts = [
   { icon: MapPin, label: EVENT.city, sub: EVENT.address },
 ];
 
+const typedPhrase = "pagam caro sem reclamar";
+
 export function Hero() {
+  const [typedText, setTypedText] = useState("");
+
+  useEffect(() => {
+    let index = 0;
+    let interval: number | undefined;
+    const start = window.setTimeout(() => {
+      interval = window.setInterval(() => {
+        index += 1;
+        setTypedText(typedPhrase.slice(0, index));
+        if (index === typedPhrase.length && interval) window.clearInterval(interval);
+      }, 75);
+    }, 550);
+
+    return () => {
+      window.clearTimeout(start);
+      if (interval) window.clearInterval(interval);
+    };
+  }, []);
+
   return (
     <section id="top" className="grain relative isolate min-h-[100svh] overflow-hidden bg-ink">
       <div className="absolute inset-0">
@@ -31,7 +53,19 @@ export function Hero() {
             <Reveal delay={100}>
               <h1 className="display mt-8 text-[2.15rem] leading-[1.1] sm:text-5xl lg:text-[3.6rem]">
                 Em 3 horas eu vou te mostrar como atrair os clientes que{" "}
-                <span className="text-gold-light">pagam caro sem reclamar</span>, através de um
+                <span className="inline-grid text-gold-light">
+                  <span aria-hidden="true" className="invisible col-start-1 row-start-1">
+                    {typedPhrase}
+                  </span>
+                  <span
+                    aria-label={typedPhrase}
+                    className="col-start-1 row-start-1"
+                  >
+                    {typedText}
+                    <span aria-hidden="true" className="ml-1 inline-block h-[0.85em] animate-pulse border-r-2 border-gold-light align-[-0.05em]" />
+                  </span>
+                </span>
+                , através de um
                 posicionamento único.
               </h1>
             </Reveal>
