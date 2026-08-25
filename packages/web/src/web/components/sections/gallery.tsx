@@ -83,6 +83,15 @@ export function Gallery() {
           <ChevronRight className="size-5" />
         </button>
       </div>
+
+      <figure className="mt-12 overflow-hidden border border-gold/15 md:mt-16">
+        <img
+          src="/images/foto-grupo-alianca.png"
+          alt="Participantes da Aliança Empreendedora reunidos"
+          loading="lazy"
+          className="h-auto w-full object-cover"
+        />
+      </figure>
     </Section>
   );
 }
