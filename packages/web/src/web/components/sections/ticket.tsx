@@ -13,19 +13,21 @@ const included = [
 export function Ticket() {
   return (
     <section id="inscricao" className="grain relative bg-offwhite px-6 py-24 text-graphite md:px-10 md:py-32">
-      <div className="relative mx-auto grid w-full max-w-[1200px] gap-16 lg:grid-cols-12 lg:gap-24">
-        <div className="lg:col-span-5">
-          <Eyebrow index="VI" tone="graphite">
-            Acesso ao encontro
-          </Eyebrow>
+      <div className="relative mx-auto w-full max-w-[760px]">
+        <div>
+          <div className="flex justify-center">
+            <Eyebrow index="VI" tone="graphite">
+              Acesso ao encontro
+            </Eyebrow>
+          </div>
           <Reveal delay={80}>
-            <h2 className="display mt-7 text-4xl md:text-5xl">
+            <h2 className="display mt-7 text-center text-4xl md:text-5xl">
               Um investimento, uma cadeira na sala.
             </h2>
           </Reveal>
 
           <Reveal delay={140}>
-            <div className="mt-10 border border-graphite/15 p-8">
+            <div className="mx-auto mt-10 max-w-[620px] border border-graphite/15 p-8 text-left">
               <span className="label-xs text-graphite/50">Ingresso individual</span>
               <p className="display mt-3 text-5xl text-graphite">{EVENT.price}</p>
               <p className="mt-2 text-xs text-graphite/55">{EVENT.priceNote}</p>
@@ -42,7 +44,7 @@ export function Ticket() {
           </Reveal>
 
           <Reveal delay={200}>
-            <p className="mt-7 text-xs leading-relaxed text-graphite/55">
+            <p className="mx-auto mt-7 max-w-[620px] text-center text-xs leading-relaxed text-graphite/55">
               Solicite sua vaga pelo WhatsApp. Nossa equipe confirma a inscrição e envia os dados
               de pagamento por lá.{" "}
               <a
@@ -58,12 +60,12 @@ export function Ticket() {
           </Reveal>
         </div>
 
-        <Reveal delay={160} className="flex items-center lg:col-span-7">
+        <Reveal delay={160} className="mt-9 flex justify-center">
           <a
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="label-xs flex w-full items-center justify-center bg-graphite px-8 py-6 text-offwhite transition-colors hover:bg-black md:py-7"
+            className="label-xs flex w-full max-w-[620px] items-center justify-center bg-graphite px-8 py-6 text-offwhite transition-colors hover:bg-black md:py-7"
           >
             Solicitar minha vaga
           </a>
