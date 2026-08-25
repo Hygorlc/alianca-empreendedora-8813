@@ -9,9 +9,9 @@ export function Speaker() {
           <div className="relative">
             <div className="absolute -top-4 -left-4 h-24 w-24 border-t border-l border-gold/40" />
             <img
-              src="/images/pablo.jpg"
-              alt="Pablo Pitani em palestra"
-              className="relative w-full object-cover saturate-[0.65]"
+              src="/images/pablo-historia.png"
+              alt="Retrato de Pablo Pitani"
+              className="relative w-full object-cover"
             />
             <div className="absolute -right-4 -bottom-4 h-24 w-24 border-r border-b border-gold/40" />
           </div>
