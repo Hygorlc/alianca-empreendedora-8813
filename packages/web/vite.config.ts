@@ -7,6 +7,38 @@ import honoDevPlugin from "./vite/__plugins/hono-dev-plugin";
 import assetOptimizerPlugin from "./vite/__plugins/asset-optimizer-plugin";
 import ports from "../../__ports.cjs";
 
+function inlineProductionCss() {
+  return {
+    name: "inline-production-css",
+    apply: "build" as const,
+    enforce: "post" as const,
+    generateBundle(_: unknown, bundle: Record<string, any>) {
+      const html = Object.values(bundle).find(
+        (item) => item.type === "asset" && item.fileName === "index.html",
+      );
+
+      if (!html || typeof html.source !== "string") return;
+
+      for (const [fileName, item] of Object.entries(bundle)) {
+        if (item.type !== "asset" || !fileName.endsWith(".css")) continue;
+
+        const css = typeof item.source === "string" ? item.source : item.source.toString();
+        const marker = `href="/${fileName}"`;
+        const linkStart = html.source.lastIndexOf("<link", html.source.indexOf(marker));
+        const linkEnd = html.source.indexOf(">", html.source.indexOf(marker));
+
+        if (linkStart >= 0 && linkEnd >= 0) {
+          html.source =
+            html.source.slice(0, linkStart) +
+            `<style>${css}</style>` +
+            html.source.slice(linkEnd + 1);
+          delete bundle[fileName];
+        }
+      }
+    },
+  };
+}
+
 const root = path.resolve(__dirname, "../..");
 
 export default defineConfig(({ mode }) => {
@@ -23,6 +55,7 @@ export default defineConfig(({ mode }) => {
       runableAnalyticsPlugin(),
       tailwind(),
       assetOptimizerPlugin(),
+      inlineProductionCss(),
     ],
     resolve: {
       alias: {
