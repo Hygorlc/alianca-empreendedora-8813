@@ -6,7 +6,11 @@ import { Reveal } from "../reveal";
 const facts = [
   { icon: CalendarDays, label: EVENT.dateLabel, sub: EVENT.weekdayLabel },
   { icon: Clock, label: EVENT.timeLabel, sub: "3 horas de encontro" },
-  { icon: MapPin, label: EVENT.city, sub: EVENT.address },
+  {
+    icon: MapPin,
+    label: EVENT.city,
+    sub: `${EVENT.address} ${EVENT.addressComplement}`,
+  },
 ];
 
 const typedPhrase = "pagam caro sem reclamar";
