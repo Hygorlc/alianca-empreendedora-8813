@@ -1,52 +1,70 @@
-import { Eyebrow, Section, SectionTitle } from "../section";
+import type { ReactNode } from "react";
+import { CheckCircle2 } from "lucide-react";
+import { Section } from "../section";
 import { Reveal } from "../reveal";
 
-const items = [
+const items: { content: ReactNode }[] = [
   {
-    n: "01",
-    title: "Por que quem pergunta o preço primeiro raramente compra",
-    body: "E como inverter a ordem da conversa para que valor venha antes de número.",
+    content: (
+      <>
+        Por que <strong>o cliente que pergunta o preço primeiro nunca compra</strong>, e o que fazer
+        para inverter essa ordem.
+      </>
+    ),
   },
   {
-    n: "02",
-    title: "Como cobrar mais que o concorrente que sabe menos que você",
-    body: "Sem perder a venda. É exatamente aqui que a maioria dos empresários erra.",
+    content: (
+      <>
+        Como <strong>cobrar mais que o concorrente que sabe menos que você, sem perder venda</strong>{" "}
+        (a maioria erra justamente aqui)
+      </>
+    ),
   },
   {
-    n: "03",
-    title: "O método RCV de posicionamento",
-    body: "A construção que faz o cliente certo procurar você antes de você ir atrás dele.",
+    content: (
+      <>
+        O método RCV de posicionamento que{" "}
+        <strong>faz o cliente certo te procurar antes de você ir atrás dele</strong>
+      </>
+    ),
   },
   {
-    n: "04",
-    title: "Vender o que você faz x vender quem você é",
-    body: "Só uma das duas sustenta margem, paga as contas e escala o faturamento.",
+    content: (
+      <>
+        A diferença entre vender o que você faz e vender quem você é —{" "}
+        <strong>
+          e por que só uma das duas paga as contas e escala o faturamento do seu negócio.
+        </strong>
+      </>
+    ),
   },
   {
-    n: "05",
-    title: "O motivo real do seu Instagram não trazer cliente",
-    body: "Não tem relação com algoritmo, edição ou frequência de publicação.",
+    content: (
+      <>
+        O motivo real do teu Instagram não trazer cliente{" "}
+        <strong>(não tem a ver com algoritmo, edição ou frequência de post)</strong>
+      </>
+    ),
   },
 ];
 
 export function Discover() {
   return (
     <Section id="encontro">
-      <Eyebrow index="I">O que vai ter na sala em 3 horas</Eyebrow>
-      <SectionTitle>
-        Três horas para mudar a forma como o mercado{" "}
-        <span className="text-gold-light">percebe e valoriza você.</span>
-      </SectionTitle>
+      <Reveal>
+        <h2 className="display max-w-5xl text-4xl text-gold-light md:text-5xl">
+          O que você vai descobrir nas 3 horas da Aliança Presencial:
+        </h2>
+      </Reveal>
 
-      <div className="mt-16 border-t border-gold/15">
-        {items.map((item, i) => (
-          <Reveal key={item.n} delay={i * 70}>
-            <div className="group grid gap-4 border-b border-gold/15 py-9 transition-colors hover:bg-gold/[0.03] md:grid-cols-12 md:gap-10">
-              <span className="label-xs text-gold/70 md:col-span-1">{item.n}</span>
-              <h3 className="display text-2xl text-offwhite md:col-span-6 md:text-3xl">
-                {item.title}
-              </h3>
-              <p className="text-sm text-offwhite/55 md:col-span-5">{item.body}</p>
+      <div className="mt-12 space-y-5">
+        {items.map((item, index) => (
+          <Reveal key={index} delay={index * 70}>
+            <div className="flex items-start gap-4 border border-offwhite/10 bg-gradient-to-b from-offwhite/[0.08] to-transparent px-6 py-5 md:px-7">
+              <CheckCircle2 className="mt-0.5 size-6 shrink-0 fill-[#cad65b] text-ink" />
+              <p className="text-base leading-relaxed text-offwhite/75 md:text-lg">
+                {item.content}
+              </p>
             </div>
           </Reveal>
         ))}
