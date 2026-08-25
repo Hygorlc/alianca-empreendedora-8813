@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
-import { whatsappLink } from "../../lib/event";
 import { Eyebrow, Section, SectionTitle } from "../section";
 import { Reveal } from "../reveal";
 
@@ -71,21 +70,6 @@ export function Faq() {
           );
         })}
       </div>
-
-      <Reveal delay={200}>
-        <p className="mt-12 text-sm text-offwhite/50">
-          Ficou outra dúvida?{" "}
-          <a
-            href={whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border-b border-gold/40 text-gold hover:border-gold"
-          >
-            Fale direto com a curadoria
-          </a>
-          .
-        </p>
-      </Reveal>
     </Section>
   );
 }
