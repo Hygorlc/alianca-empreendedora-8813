@@ -3,13 +3,13 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Section } from "../section";
 
 const photos = [
-  "https://pablopitani.com.br/wp-content/uploads/2026/05/18-FOTOS-DIA-02-1024x776.jpg",
-  "https://pablopitani.com.br/wp-content/uploads/2026/05/8-FOTOS-DIA-02-1024x782.jpg",
-  "https://pablopitani.com.br/wp-content/uploads/2026/05/46-FOTOS-DIA-02-1024x715.jpg",
-  "https://pablopitani.com.br/wp-content/uploads/2026/05/FOTOS-DIA-O2-36-1024x760.png",
-  "https://pablopitani.com.br/wp-content/uploads/2026/05/FOTOS-7-12-1024x888.png",
-  "https://pablopitani.com.br/wp-content/uploads/2026/05/PANA6098-1024x825.jpg",
-  "https://pablopitani.com.br/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-13.16.43.jpeg",
+  "/images/carrossel-01.jpg",
+  "/images/carrossel-02.jpg",
+  "/images/carrossel-03.jpg",
+  "/images/carrossel-04.png",
+  "/images/carrossel-05.webp",
+  "/images/carrossel-06.webp",
+  "/images/carrossel-07.webp",
 ];
 
 export function Gallery() {
