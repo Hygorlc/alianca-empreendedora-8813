@@ -15,8 +15,7 @@ export const EVENT = {
   mapsQuery: "Av. Diário de Notícias, 200, Porto Alegre, RS",
   price: "R$ 197,00",
   priceNote: "Investimento único por empresário",
-  /** Substituir pelo número oficial de atendimento. */
-  whatsapp: "5551999999999",
+  whatsapp: "5551992819659",
   whatsappMessage:
     "Olá! Quero saber mais sobre o encontro Aliança Empreendedora de 17 de setembro em Porto Alegre.",
   speaker: {
