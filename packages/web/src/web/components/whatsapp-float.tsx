@@ -26,7 +26,7 @@ export function WhatsappFloat() {
       )}
     >
       <FaWhatsapp className="size-6 text-gold transition-colors group-hover:text-gold-light" />
-      <span className="label-xs hidden text-offwhite/80 sm:inline">Falar com a curadoria</span>
+      <span className="label-xs hidden text-offwhite/80 sm:inline">Dúvidas</span>
     </a>
   );
 }
