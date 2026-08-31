@@ -31,7 +31,7 @@ const faqs = [
 ];
 
 export function Faq() {
-  const [open, setOpen] = useState<number | null>(0);
+  const [open, setOpen] = useState<number | null>(null);
 
   return (
     <Section id="faq" tone="soft">
@@ -61,9 +61,11 @@ export function Faq() {
                   className="grid overflow-hidden transition-all duration-500"
                   style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
                 >
-                  <p className="min-h-0 max-w-3xl pb-8 text-sm leading-relaxed text-offwhite/55">
-                    {faq.a}
-                  </p>
+                  <div className="min-h-0 overflow-hidden">
+                    <p className="max-w-3xl pb-8 text-sm leading-relaxed text-offwhite/55">
+                      {faq.a}
+                    </p>
+                  </div>
                 </div>
               </div>
             </Reveal>
