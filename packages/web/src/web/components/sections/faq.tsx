@@ -62,7 +62,7 @@ export function Faq() {
                   style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
                 >
                   <div className="min-h-0 overflow-hidden">
-                    <p className="max-w-3xl pb-8 text-sm leading-relaxed text-offwhite/55">
+                    <p className="max-w-3xl pb-8 text-base leading-relaxed text-offwhite/60">
                       {faq.a}
                     </p>
                   </div>
