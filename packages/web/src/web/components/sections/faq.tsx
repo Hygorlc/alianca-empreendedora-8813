@@ -5,10 +5,6 @@ import { Reveal } from "../reveal";
 
 const faqs = [
   {
-    q: "Essa palestra serve pra qualquer tipo de negócio?",
-    a: "Serve pra qualquer empresário ou profissional liberal que vende seu trabalho e quer parar de competir por preço. Já passaram pela sala advogados, médicos, esteticistas, arquitetos, consultores, donos de clínica, gestores de e-commerce e empresários do varejo. O método de posicionamento é universal, o que muda é a aplicação no seu nicho específico, que será trabalhada na análise ao vivo.",
-  },
-  {
     q: "O ingresso é individual?",
     a: "Sim. Cada ingresso custa R$ 197 e é válido para uma pessoa. Se você quiser participar com um sócio, cônjuge, gerente de marketing ou outra pessoa envolvida nas decisões do negócio, será necessário solicitar uma vaga individual para cada participante.",
   },
